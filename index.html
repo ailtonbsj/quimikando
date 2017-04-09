@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Quimikando</title>
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="vendor/jquery/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+.btn-icon {
+	display: block;
+    border-radius: 25px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 1);
+	transition: all 200ms ease-out;
+	margin: 15px auto;
+	width: 90px;
+	height: 90px;  
+}
+
+.btn-icon:hover {
+	box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+}
+
+body {
+	padding-top: 70px; 
+}
+
+.label-icone {
+	display: block;
+	margin: 0 auto;
+}
+
+</style>
+
+</head>
+
+<body>
+<!-- Menu principal -->
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">Quimikando</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">Sobre</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+<!-- Fim Menu principal -->
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-3">&nbsp;</div>
+		<div class="col-xs-6">
+			<img id="btn-hang" src="images/hangman.png" class="btn-icon">
+			<span class="label label-warning label-icone">Jogo da Forca</span>
+		</div>
+		<div class="col-xs-3">&nbsp;</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div>
+				<img id="btn-cross" src="images/crossword.png" class="btn-icon">
+				<span class="label label-info label-icone">Palavras Cruzadas</span>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<img id="btn-quiz" src="images/quiz.png" class="btn-icon">
+			<span class="label label-danger label-icone">Quiz</span>
+		</div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+	$(function(){
+		$("#btn-hang").click(function(){
+			window.location = "hang.html";
+		});
+		$("#btn-cross").click(function(){
+			window.location = "cross.html";
+		});
+		$("#btn-quiz").click(function(){
+			window.location = "quiz.html";
+		});
+	});
+</script>
+</body>
+
+</html>
