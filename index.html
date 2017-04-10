@@ -8,16 +8,17 @@
 <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <script type="text/javascript" src="vendor/jquery/jquery-3.2.0.min.js"></script>
 <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="vendor/bootbox/bootbox.min.js"></script>
 
 <style type="text/css">
 .btn-icon {
 	display: block;
     border-radius: 25px;
-    box-shadow: 0 0 6px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px 8px rgba(0, 0, 0, 1);
 	transition: all 200ms ease-out;
 	margin: 15px auto;
 	width: 90px;
-	height: 90px;  
+	height: 90px;
 }
 
 .btn-icon:hover {
@@ -25,7 +26,9 @@
 }
 
 body {
-	padding-top: 70px; 
+	padding-top: 70px;
+	background-image: url('images/bg-tela.jpg');
+	background-size: 300px 300px;
 }
 
 .label-icone {
@@ -52,7 +55,7 @@ body {
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#">Sobre</a>
+              <a id="sobre-menu">Sobre</a>
             </li>
           </ul>
 
@@ -66,7 +69,7 @@ body {
 		<div class="col-xs-3">&nbsp;</div>
 		<div class="col-xs-6">
 			<img id="btn-hang" src="images/hangman.png" class="btn-icon">
-			<span class="label label-warning label-icone">Jogo da Forca</span>
+			<span class="label label-default label-icone">Jogo da Forca</span>
 		</div>
 		<div class="col-xs-3">&nbsp;</div>
 	</div>
@@ -74,12 +77,12 @@ body {
 		<div class="col-xs-6">
 			<div>
 				<img id="btn-cross" src="images/crossword.png" class="btn-icon">
-				<span class="label label-info label-icone">Palavras Cruzadas</span>
+				<span class="label label-default label-icone">Palavras Cruzadas</span>
 			</div>
 		</div>
 		<div class="col-xs-6">
 			<img id="btn-quiz" src="images/quiz.png" class="btn-icon">
-			<span class="label label-danger label-icone">Quiz</span>
+			<span class="label label-default label-icone">Quiz</span>
 		</div>
 	</div>
 </div>
@@ -96,6 +99,13 @@ body {
 		});
 		$("#btn-quiz").click(function(){
 			window.location = "quiz.html";
+		});
+		$("#sobre-menu").click(function(){
+			bootbox.confirm({
+				title: "Sobre",
+				message: "Aplicativo projetado por Suyanne Hellen Holanda Pinheiro.",
+				callback: function(r){}
+			});
 		});
 	});
 </script>
