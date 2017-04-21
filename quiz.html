@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Quimikando</title>
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="vendor/jquery/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="vendor/bootbox/bootbox.min.js"></script>
+
+<style type="text/css">
+.btn-icon {
+	display: block;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 8px rgba(0, 0, 0, 1);
+	transition: all 200ms ease-out;
+	margin: 15px auto;
+	width: 90px;
+	height: 90px;
+}
+
+.btn-icon:hover {
+	box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+}
+
+body {
+	padding-top: 70px;
+	background-size: 300px 300px;
+}
+
+.label-icone {
+	display: block;
+	margin: 0 auto;
+}
+
+</style>
+
+</head>
+
+<body>
+<!-- Menu principal -->
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">Quimikando</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a id="sobre-menu">Sobre</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+<!-- Fim Menu principal -->
+
+<div class="container">
+
+</div>
+
+
+
+<script type="text/javascript">
+	$(function(){
+		$("#btn-hang").click(function(){
+			window.location = "hang.html";
+		});
+		$("#btn-cross").click(function(){
+			window.location = "cross.html";
+		});
+		$("#btn-quiz").click(function(){
+			window.location = "quiz.html";
+		});
+		$("#sobre-menu").click(function(){
+			bootbox.confirm({
+				title: "Sobre",
+				message: "Aplicativo projetado por Suyanne Hellen Holanda Pinheiro.",
+				callback: function(r){}
+			});
+		});
+	});
+</script>
+</body>
+
+</html>

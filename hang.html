@@ -1,0 +1,163 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Quimikando</title>
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="vendor/jquery/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="vendor/bootbox/bootbox.min.js"></script>
+
+<style type="text/css">
+.btn-icon {
+	display: block;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 8px rgba(0, 0, 0, 1);
+	transition: all 200ms ease-out;
+	margin: 15px auto;
+	width: 90px;
+	height: 90px;
+}
+
+.btn-icon:hover {
+	box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+}
+
+body {
+	padding-top: 70px;
+	background-size: 300px 300px;
+}
+
+.label-icone {
+	display: block;
+	margin: 0 auto;
+}
+
+#man {
+  /*border: 1px solid green;*/
+}
+
+#man img {
+  /*border: 1px solid red;*/
+  width: 130px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+.row div {
+  /*border: 1px solid white;*/
+}
+.hangword {
+  font-size: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+</style>
+
+</head>
+
+<body>
+<!-- Menu principal -->
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">Quimikando</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a id="sobre-menu">Sobre</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+<!-- Fim Menu principal -->
+
+<div class="container">
+  <div id="frase-view" class="well well-sm">
+    Tenho direito a quatro ligaões e sou pretinho algumas vezes.
+  </div>
+  <div id="man" class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8">
+      <img src="images/man0.png">
+    </div>
+    <div class="col-xs-2"></div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="hangword" class="col-xs-12"></div>
+  </div>
+  <br>
+  <div class="row">
+    <div>
+      <div id="keyboard" class="input-group col-xs-12">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		$("#sobre-menu").click(function(){
+			bootbox.confirm({
+				title: "Sobre",
+				message: "Aplicativo projetado por Suyanne Hellen Holanda Pinheiro.",
+				callback: function(r){}
+			});
+		});
+
+    for (var i = 65; i <= 90; i++) {
+      var btn = document.createElement('button');
+      $(btn).addClass('btn btn-sm btn-default col-xs-1').html(String.fromCharCode(i));
+      $('#keyboard').append(btn);
+    }
+
+    $('#keyboard button').click(function(){
+      var l = $(this).html();
+      var i = palavraAtual.indexOf(l.toLowerCase());
+      if(i != -1){
+        palavraUser[i] = l;
+        $('.hangword').html(palavraUser);
+      } else {
+        console.log('matou');
+      }
+    });
+
+    function novaFrase(){
+      palavraAtual = dados[indice].palavra;
+      fraseAtual = dados[indice].frase;
+      indice++;
+      $('#frase-view').html(fraseAtual);
+      var len = palavraAtual.length;
+      var map = Array.prototype.map;
+      palavraUser = map.call(palavraAtual, function(x) { return '_' });
+      $('.hangword').html(palavraUser);
+    }
+
+    dados = [
+      {'palavra':'carbono', 'frase': 'Tenho direito a quatro ligaões e sou pretinho algumas vezes.'},
+      {'palavra':'agua', 'frase': 'Nao tenho cor e sou molhado.'}
+    ];
+    indice = 0;
+    palavraAtual = '';
+    palavraUser = '';
+    fraseAtual = '';
+    //novaFrase();
+    novaFrase();
+	});
+</script>
+</body>
+
+</html>
