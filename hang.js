@@ -50,9 +50,10 @@ $(function(){
   }
 
   dados = [
-    {'palavra':'fosforo', 'frase': 'Ja fui feito de mijo e tenho a cabeça quente'},
-    {'palavra':'carbono', 'frase': 'Tenho direito a quatro ligaões e sou pretinho algumas vezes.'},
-    {'palavra':'agua', 'frase': 'Nao tenho cor e sou molhado.'}
+    {'palavra':'fosforo', 'frase': 'Descoberto por Henning Brand.'},
+    {'palavra':'carbono', 'frase': 'Tenho direito a quatro ligaões.'},
+    {'palavra':'agua', 'frase': 'Minha formula quimica é o H2O.'},
+    {'palavra':'eletron', 'frase': 'Sou disparado na tela de um monitor CRT.'}
   ];
   indice = 0;
   tentativas = 0;
