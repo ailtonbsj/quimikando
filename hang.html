@@ -91,7 +91,7 @@ body {
   <div id="man" class="row">
     <div class="col-xs-2"></div>
     <div class="col-xs-8">
-      <img src="images/man0.png">
+      <img id="imgman" src="images/man6.png">
     </div>
     <div class="col-xs-2"></div>
   </div>
@@ -107,57 +107,7 @@ body {
     </div>
   </div>
 </div>
-
-<script type="text/javascript">
-	$(function(){
-		$("#sobre-menu").click(function(){
-			bootbox.confirm({
-				title: "Sobre",
-				message: "Aplicativo projetado por Suyanne Hellen Holanda Pinheiro.",
-				callback: function(r){}
-			});
-		});
-
-    for (var i = 65; i <= 90; i++) {
-      var btn = document.createElement('button');
-      $(btn).addClass('btn btn-sm btn-default col-xs-1').html(String.fromCharCode(i));
-      $('#keyboard').append(btn);
-    }
-
-    $('#keyboard button').click(function(){
-      var l = $(this).html();
-      var i = palavraAtual.indexOf(l.toLowerCase());
-      if(i != -1){
-        palavraUser[i] = l;
-        $('.hangword').html(palavraUser);
-      } else {
-        console.log('matou');
-      }
-    });
-
-    function novaFrase(){
-      palavraAtual = dados[indice].palavra;
-      fraseAtual = dados[indice].frase;
-      indice++;
-      $('#frase-view').html(fraseAtual);
-      var len = palavraAtual.length;
-      var map = Array.prototype.map;
-      palavraUser = map.call(palavraAtual, function(x) { return '_' });
-      $('.hangword').html(palavraUser);
-    }
-
-    dados = [
-      {'palavra':'carbono', 'frase': 'Tenho direito a quatro ligaões e sou pretinho algumas vezes.'},
-      {'palavra':'agua', 'frase': 'Nao tenho cor e sou molhado.'}
-    ];
-    indice = 0;
-    palavraAtual = '';
-    palavraUser = '';
-    fraseAtual = '';
-    //novaFrase();
-    novaFrase();
-	});
-</script>
+<script src="hang.js" charset="utf-8"></script>
 </body>
 
 </html>
