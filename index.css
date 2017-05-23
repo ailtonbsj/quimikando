@@ -1,0 +1,24 @@
+.btn-icon {
+	display: block;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 8px rgba(0, 0, 0, 1);
+	transition: all 200ms ease-out;
+	margin: 15px auto;
+	width: 90px;
+	height: 90px;
+}
+
+.btn-icon:hover {
+	box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+}
+
+body {
+	padding-top: 70px;
+	background-image: url('images/bg-tela.jpg');
+	background-size: 300px 300px;
+}
+
+.label-icone {
+	display: block;
+	margin: 0 auto;
+}

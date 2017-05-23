@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Quimikando</title>
-<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<script type="text/javascript" src="vendor/jquery/jquery-3.2.0.min.js"></script>
-<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="vendor/bootbox/bootbox.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="../vendor/jquery/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../vendor/bootbox/bootbox.min.js"></script>
 
 <style type="text/css">
 .btn-icon {
@@ -68,7 +68,7 @@ body {
 </div>
 
 
-
+<script src="../menu.js" charset="utf-8"></script>
 <script type="text/javascript">
 	$(function(){
 		$("#btn-hang").click(function(){
@@ -79,13 +79,6 @@ body {
 		});
 		$("#btn-quiz").click(function(){
 			window.location = "quiz.html";
-		});
-		$("#sobre-menu").click(function(){
-			bootbox.confirm({
-				title: "Sobre",
-				message: "Aplicativo projetado por Suyanne Hellen Holanda Pinheiro.",
-				callback: function(r){}
-			});
 		});
 	});
 </script>

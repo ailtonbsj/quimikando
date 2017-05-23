@@ -1,0 +1,44 @@
+.btn-icon {
+	display: block;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 8px rgba(0, 0, 0, 1);
+	transition: all 200ms ease-out;
+	margin: 15px auto;
+	width: 90px;
+	height: 90px;
+}
+
+.btn-icon:hover {
+	box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+}
+
+body {
+	padding-top: 70px;
+	background-size: 300px 300px;
+}
+
+.label-icone {
+	display: block;
+	margin: 0 auto;
+}
+
+#man {
+  /*border: 1px solid green;*/
+}
+
+#man img {
+  /*border: 1px solid red;*/
+  width: 130px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+.row div {
+  /*border: 1px solid white;*/
+}
+.hangword {
+  font-size: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}

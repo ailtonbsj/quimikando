@@ -6,38 +6,10 @@
 
 <title>Quimikando</title>
 <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="index.css">
 <script type="text/javascript" src="vendor/jquery/jquery-3.2.0.min.js"></script>
 <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="vendor/bootbox/bootbox.min.js"></script>
-
-<style type="text/css">
-.btn-icon {
-	display: block;
-    border-radius: 25px;
-    box-shadow: 0 0 10px 8px rgba(0, 0, 0, 1);
-	transition: all 200ms ease-out;
-	margin: 15px auto;
-	width: 90px;
-	height: 90px;
-}
-
-.btn-icon:hover {
-	box-shadow: 0 0 6px rgba(35, 173, 278, 1);
-}
-
-body {
-	padding-top: 70px;
-	background-image: url('images/bg-tela.jpg');
-	background-size: 300px 300px;
-}
-
-.label-icone {
-	display: block;
-	margin: 0 auto;
-}
-
-</style>
-
 </head>
 
 <body>
@@ -87,28 +59,8 @@ body {
 	</div>
 </div>
 
-
-
-<script type="text/javascript">
-	$(function(){
-		$("#btn-hang").click(function(){
-			window.location = "hang.html";
-		});
-		$("#btn-cross").click(function(){
-			window.location = "cross.html";
-		});
-		$("#btn-quiz").click(function(){
-			window.location = "quiz.html";
-		});
-		$("#sobre-menu").click(function(){
-			bootbox.confirm({
-				title: "Sobre",
-				message: "Aplicativo projetado por Suyanne Hellen Holanda Pinheiro.",
-				callback: function(r){}
-			});
-		});
-	});
-</script>
+<script src="menu.js" charset="utf-8"></script>
+<script src="index.js" charset="utf-8"></script>
 </body>
 
 </html>
