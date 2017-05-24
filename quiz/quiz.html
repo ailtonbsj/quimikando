@@ -1,74 +1,63 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Quimikando</title>
-<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/dark-theme.min.css">
-<link rel="stylesheet" type="text/css" href="quiz.css">
-<script type="text/javascript" src="../vendor/jquery/jquery-3.2.0.min.js"></script>
-<script type="text/javascript" src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../vendor/bootbox/bootbox.min.js"></script>
+  <title>Quimikando</title>
+  <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/dark-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="quiz.css">
+  <script type="text/javascript" src="../vendor/jquery/jquery-3.2.0.min.js"></script>
+  <script type="text/javascript" src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../vendor/bootbox/bootbox.min.js"></script>
 
 </head>
 
 <body>
-<!-- Menu principal -->
-<div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="../" class="navbar-brand">Quimikando</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a id="sobre-menu">Sobre</a>
-            </li>
-          </ul>
+  <!-- Menu principal -->
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="../" class="navbar-brand">Quimikando</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a id="sobre-menu">Sobre</a>
+          </li>
+        </ul>
 
-        </div>
       </div>
     </div>
-<!-- Fim Menu principal -->
-
-<div class="container">
-
-  <div id="frase-view" class="well well-sm">
-    Qual a formula da água?
   </div>
+  <!-- Fim Menu principal -->
 
-  <div class="col-xs-3 col-xs-offset-5">
-     <div id="loadbar" style="display: none;">
-        <div class="blockG" id="rotateG_01"></div>
-        <div class="blockG" id="rotateG_02"></div>
-        <div class="blockG" id="rotateG_03"></div>
-        <div class="blockG" id="rotateG_04"></div>
-        <div class="blockG" id="rotateG_05"></div>
-        <div class="blockG" id="rotateG_06"></div>
-        <div class="blockG" id="rotateG_07"></div>
-        <div class="blockG" id="rotateG_08"></div>
+  <div class="container">
+
+    <div id="frase-view" class="well well-sm">
+      ...
     </div>
+
+    <div class="quiz" id="items" data-toggle="buttons">
+      <label class="element-animation1 btn btn-lg btn-primary btn-block">
+        <span class="btn-label">
+          <i class="glyphicon glyphicon-chevron-right"></i>
+        </span>
+        H2O
+      </label>
+    </div>
+
   </div>
 
-  <div class="quiz" id="quiz" data-toggle="buttons">
-   <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">H2O</label>
-   <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">Etanol</label>
-   <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">Metilamina</label>
-   <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">Alcool</label>
-  </div>
 
-</div>
-
-
-<script src="../menu.js" charset="utf-8"></script>
-<script src="quiz.js" charset="utf-8"></script>
+  <script src="../menu.js" charset="utf-8"></script>
+  <script src="quiz.js" charset="utf-8"></script>
 </body>
 
 </html>
