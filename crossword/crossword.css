@@ -1,0 +1,18 @@
+body {
+	padding-top: 70px;
+	background-size: 300px 300px;
+}
+table {
+  border-collapse: collapse;
+	width: 100%;
+}
+td {
+  border: solid 1px #272b30;
+  font-size: 18px;
+	color: black;
+  text-align: center;
+  font-family: monospace;
+  background-color: #272b30;
+  width: 50px;
+  height: 30px;
+}
