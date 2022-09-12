@@ -29,7 +29,7 @@ var dataset = [
   },
   {
     pergunta: "Usado em moedas e premios",
-    resposta: "plata",
+    resposta: "prata",
     horizontal: true,
     x: 1,
     y: 7
