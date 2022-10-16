@@ -1,20 +1,20 @@
 var dataset = [
   {
-    pergunta: "Primeiro Elemento da Tabela Periodica",
+    pergunta: "Primeiro Elemento da Tabela Periódica",
     resposta: "hidrogenio",
     horizontal: true,
     x: 1,
     y: 1
   },
   {
-    pergunta: "Um gas nobre",
+    pergunta: "Um gás nobre",
     resposta: "helio",
     horizontal: false,
     x: 1,
     y: 1
   },
   {
-    pergunta: "Existe em lampadas coloridas",
+    pergunta: "Existe em lâmpadas coloridas",
     resposta: "neonio",
     horizontal: false,
     x: 8,
@@ -28,14 +28,14 @@ var dataset = [
     y: 4
   },
   {
-    pergunta: "Usado em moedas e premios",
+    pergunta: "Usado em moedas e prêmios",
     resposta: "prata",
     horizontal: true,
     x: 1,
     y: 7
   },
   {
-    pergunta: "Terceiro numero por extenso",
+    pergunta: "Terceiro número por extenso",
     resposta: "tres",
     horizontal: false,
     x: 4,

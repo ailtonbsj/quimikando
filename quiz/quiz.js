@@ -1,24 +1,7 @@
-var dataSource = [
-  {
-    frase:'Qual a formula da agua?',
-    itens:['H2O','H2O2','CH4','O2']
-  },
-  {
-    frase:'No nucleo de um atomo existem?',
-    itens:['protons','eletrons','ions','cations']
-  },
-  {
-    frase:'O ouro é um:',
-    itens:['metal','semi-metal','ametal','gas nobre']
-  },
-  {
-    frase:'A vitamina C é um tipo de:',
-    itens:['ácido','base','sal','gás']
-  }
-];
-var dataSourceIndex = 0;
-var itemNow = undefined;
-var itemsDom = $('#items');
+let dataSource = [];
+let dataSourceIndex = 0;
+let itemNow = undefined;
+let itemsDom = $('#items');
 
 function generateQuestion(){
   itemsDom.empty();
@@ -32,7 +15,7 @@ function generateQuestion(){
       }
     });
   }
-  dataSourceIndex++;
+  dataSourceIndex = Math.floor(Math.random()*dataSource.length);
   $('#frase-view').html(itemNow.frase);
   var indexs = shuffle([0,1,2,3]);
   for(index in indexs){
@@ -82,8 +65,43 @@ function shuffle(array) {
   return array;
 }
 
-$(function(){
+async function getData() {
+  let res = await fetch("../data.json");
+  data = await res.json();
+  dataSource = data.map((item, index0) => {
+    let indexs = Array.from(Array(data.length).keys());
+    let i = indexs.indexOf(index0);
+    indexs.splice(i, 1);
+    
+    index = Math.floor(Math.random()*indexs.length);
+    index1 = indexs[index];
+    i = indexs.indexOf(index1);
+    indexs.splice(i, 1);
+
+    index = Math.floor(Math.random()*indexs.length);
+    index2 = indexs[index];
+    i = indexs.indexOf(index2);
+    indexs.splice(i, 1);
+
+    index = Math.floor(Math.random()*indexs.length);
+    index3 = indexs[index];
+    i = indexs.indexOf(index3);
+    indexs.splice(i, 1);
+
+    item1 = data[index1].palavra;
+    item2 = data[index2].palavra;
+    item3 = data[index3].palavra;
+    item.itens = [
+      item.palavra, item1, item2, item3
+    ];
+    return item;
+  });
+  dataSourceIndex = Math.floor(Math.random()*dataSource.length);
   generateQuestion();
+}
+
+$(function(){
+  getData();
 });
 
 /*$(function(){

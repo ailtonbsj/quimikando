@@ -12,6 +12,12 @@ function generateKeyboard() {
       .html(String.fromCharCode(i)).click(actionUserClick);
     kb.append(btn);
   }
+  for (var i = 0; i <= 9; i++) {
+    var btn = document.createElement('button');
+    $(btn).addClass('btn btn-sm btn-default col-xs-1')
+    .html(i).click(actionUserClick);
+    kb.append(btn);
+  }
 }
 
 function generateQuestion() {
